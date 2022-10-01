@@ -17,6 +17,8 @@ struct ContentView: View {
                 HeaderComponent()
                 // vehicle component
                 VehicleComponent()
+                // vehicle detailes component
+                VehicleDetailsComponent()
                 
                 
             }
@@ -29,6 +31,32 @@ struct ContentView: View {
 }
 
 
+
+ 
+// vehicle details component
+struct VehicleDetailsComponent: View{
+    var body: some View{
+        VStack(alignment: .leading){
+            Text("Vehicle Overview")
+                .fontWeight(.bold)
+            Text("Model 3 comes with the option of dual motor all-wheel drive, 20” Überturbine Wheels and Performance Brakes for total control in all weather conditions. A carbon fiber spoiler improves stability at high speeds, all allowing Model 3 to accelerate from 0-60 mph* in as little as 3.1 seconds.")
+                .font(.system(size: 14))
+                .padding(.top,3)
+                .padding(.bottom,10)
+            
+            Button(action:{},label:{
+                Text("Order now")
+                    .fontWeight(.bold)
+            })
+            .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .center)
+            .foregroundColor(Color("Black"))
+            .background(Color("White"))
+            .cornerRadius(10)
+            
+        }
+        .padding(.top)
+    }
+}
 
 
 
