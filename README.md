@@ -1,6 +1,8 @@
 # tesla_shop
 
 ### App Screenshots
+<img src="./docsAssets/main.png" width="300"/>
+
 <p float="left">
     <img src="./docsAssets/White.png" width="200"/>
     <img src="./docsAssets/Blue.png" width="200"/>
