@@ -20,13 +20,14 @@ struct ContentView: View {
                 // vehicle detailes component
                 VehicleDetailsComponent()
                 
-                
             }
-            .padding()
+            .padding(15)
+            
         }
         .frame(maxWidth:.infinity,maxHeight:.infinity)
         .background(Color("Background"))
         .foregroundColor(Color("White"))
+        
     }
 }
 
@@ -44,17 +45,18 @@ struct VehicleDetailsComponent: View{
                 .padding(.top,3)
                 .padding(.bottom,10)
             
+            Spacer()
             Button(action:{},label:{
                 Text("Order now")
                     .fontWeight(.bold)
             })
-            .frame(width: UIScreen.main.bounds.width, height: 60, alignment: .center)
+            .frame(width: 350, height: 60, alignment: .center)
             .foregroundColor(Color("Black"))
             .background(Color("White"))
             .cornerRadius(10)
             
         }
-        .padding(.top)
+        .padding(.top,10)
     }
 }
 
@@ -69,8 +71,7 @@ struct VehicleComponent: View{
             Image(slectedVehicle)
                 .resizable()
                 .padding(.top)
-                .aspectRatio(contentMode: .fill)
-                .frame(width:UIScreen.main.bounds.width)
+                .aspectRatio(contentMode: .fit)
             
             HStack{
                 VStack(alignment: .leading){
@@ -168,6 +169,7 @@ struct VehicleComponent: View{
 struct HeaderComponent: View{
     var body: some View{
         HStack{
+            
             VStack(alignment: .leading){
                 Text("Model 3")
                     .font(.title)
@@ -175,7 +177,7 @@ struct HeaderComponent: View{
                 Text("2022 Model")
                     .font(.subheadline)
             }
-            
+        
             Spacer()
             HStack{
                 Text("$40,390")
